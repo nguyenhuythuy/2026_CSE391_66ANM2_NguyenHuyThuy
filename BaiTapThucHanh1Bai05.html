@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Management System</title>
+    <link rel="stylesheet" href="BaiTapThucHanh1Bai05.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <nav class="nav-bar">
+            <strong class="brand">HR Management</strong>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <form role="search" class="search-form">
+            <input type="search" placeholder="Search...">
+            <button type="submit">Search</button>
+        </form>
+    </header>
+
+    <main class="content-area">
+        <section class="employee-section">
+            <header class="section-header">
+                <h2>Employee</h2>
+                <button type="button" id="openBtn" class="btn-add">+ Add</button>
+            </header>
+
+            <table class="employee-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Position</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Phung Thanh Do</td>
+                        <td>Dochet1989@gmail.com</td>
+                        <td>0985674321</td>
+                        <td>Staff</td>
+                        <td class="actions">
+                            <button class="btn-edit">Edit</button>
+                            <button class="btn-delete">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Truong Tuan Tu</td>
+                        <td>GabrielHanna@gmail.com</td>
+                        <td>0353674231</td>
+                        <td>Staff</td>
+                        <td class="actions">
+                            <button class="btn-edit">Edit</button>
+                            <button class="btn-delete">Delete</button>
+                        </td>
+                    </tr>
+                       <tr>
+                        <td>3</td>
+                        <td>Lam Dinh Khoa</td>
+                        <td>FatimaBeatriz@gmail.com</td>
+                        <td>0985674321</td>
+                        <td>Staff</td>
+                        <td class="actions">
+                            <button class="btn-edit">Edit</button>
+                            <button class="btn-delete">Delete</button>
+                        </td>
+                    </tr>
+                       <tr>
+                        <td>4</td>
+                        <td>Phan Tuan Trung </td>
+                        <td>FatimaBeatriz@gmail.com</td>
+                        <td>0985674321</td>
+                        <td>Staff</td>
+                        <td class="actions">
+                            <button class="btn-edit">Edit</button>
+                            <button class="btn-delete">Delete</button>
+                        </td>
+                    </tr>
+                       <tr>
+                        <td>5</td>
+                        <td>VU a VU</td>
+                        <td>FatimaBeatriz@gmail.com</td>
+                        <td>0985674321</td>
+                        <td>Staff</td>
+                        <td class="actions">
+                            <button class="btn-edit">Edit</button>
+                            <button class="btn-delete">Delete</button>
+                        </td>
+                    </tr>
+                  
+                </tbody>
+            </table>
+        </section>
+
+        <dialog id="employeeDialog" class="modal-dialog">
+            <header class="modal-header">
+                <h3>New Employee</h3>
+                <button type="button" id="closeX" class="close-x">&times;</button>
+            </header>
+            
+            <form method="dialog" class="modal-form">
+                <section class="form-row">
+                    <p class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" required placeholder="Enter name">
+                    </p>
+                    <p class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required placeholder="Enter email">
+                    </p>
+                </section>
+                
+                <section class="form-row">
+                    <p class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" placeholder="Enter phone">
+                    </p>
+                    <p class="form-group">
+                        <label for="pos">Position</label>
+                        <select id="pos">
+                            <option value="">-- Select Position --</option>
+                            <option value="staff">Staff</option>
+                            <option value="manager">Manager</option>
+                            <option value="ceo">CEO</option>
+                        </select>
+                    </p>
+                </section>
+
+                <fieldset class="form-radio-group">
+                    <legend>Sex</legend>
+                    <label><input type="radio" name="sex" value="male"> Male</label>
+                    <label><input type="radio" name="sex" value="female"> Female</label>
+                </fieldset>
+
+                <footer class="modal-footer">
+                    <button type="submit" class="btn-save">Save</button>
+                    <button type="button" id="closeBtn" class="btn-cancel">Cancel</button>
+                </footer>
+            </form>
+        </dialog>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
