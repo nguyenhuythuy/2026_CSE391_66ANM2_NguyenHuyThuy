@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Info Form</title>
+    <link rel="stylesheet" href="BaiTapThucHanh1Bai04.css">
+</head>
+<body>
+
+<div class="container">
+    <form action="#" method="post">
+        <h3>Basic Info</h3>
+        <table>
+            <tr>
+                <td class="label">Employee ID</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td class="label">Last Name</td>
+                <td>Dodsworth</td>
+            </tr>
+            <tr>
+                <td class="label">First Name</td>
+                <td><input type="text" name="first_name" value="Anne"></td>
+            </tr>
+            <tr>
+                <td class="label">Gender</td>
+                <td>
+                    <input type="radio" name="gender" value="male"> Male<br>
+                    <input type="radio" name="gender" value="female"> Female<br>
+                    <input type="radio" name="gender" value="xxx"> XXX<br>
+                    <input type="radio" name="gender" value="zzz" checked> ZZZ
+                </td>
+            </tr>
+            <tr>
+                <td class="label">Reports To</td>
+                <td>
+                    <select name="reports_to">
+                        <option value="buchanan">Buchanan</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+
+        <h3>Contact Info</h3>
+        <table>
+            <tr>
+                <td class="label">Email</td>
+                <td><input type="email" name="email" placeholder="name@example.com"></td>
+            </tr>
+            <tr>
+                <td class="label">Address</td>
+                <td><input type="text" name="address" value="7 Houndstooth Rd."></td>
+            </tr>
+        </table>
+<h3>Optional Info</h3>
+<table>
+    <tr>
+        <td class="label">Notes</td>
+        <td>
+            <div class="editor-container">
+                <div class="editor-toolbar">
+                    <div class="toolbar-group">
+                        <span class="toolbar-item">B</span>
+                        <span class="toolbar-item" style="font-style: italic;">I</span>
+                        <span class="toolbar-item" style="text-decoration: underline;">U</span>
+                        <span class="toolbar-item" style="text-decoration: line-through;">S</span>
+                    </div>
+                    </div>
+                <div class="editor-content">
+                    <textarea name="notes" rows="6">Anne has a BA degree in English from St. Lawrence College. &#13;&#10;She is fluent in French and German.ZZZ</textarea>
+                </div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td class="label">Preferred Shift</td>
+        <td>
+            <label><input type="checkbox" name="shift" value="regular"> Regular</label><br>
+            <label><input type="checkbox" name="shift" value="gravy" checked> Gravy Yard</label>
+        </td>
+    </tr>
+    <tr>
+        <td class="label">Active?</td>
+        <td>
+            <input type="checkbox" name="active" checked>
+        </td>
+    </tr>
+    <tr>
+        <td class="label">Are you human?</td>
+        <td>
+            <div class="captcha-wrapper">
+                <div class="captcha-box">T I D A W O</div>
+                <span class="captcha-refresh">Click to change</span>
+                <input type="text" name="captcha_input" class="captcha-input">
+            </div>
+        </td>
+    </tr>
+    </table>
+
+        <div class="footer">
+            <button type="submit">Submit</button>
+            <button type="button">Cancel</button>
+            <p><small><span class="required">*</span> required</small></p>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
