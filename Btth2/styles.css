@@ -1,0 +1,92 @@
+/* --- HERO SECTION --- */
+#hero {
+  /* Bạn nhớ thay tên file ảnh nền cho đúng với thư mục máy bạn */
+  background-image: url('images/places/ocean.jpg'); 
+  background-size: cover;
+  background-position: center;
+  height: 60vh; /* Chiều cao chiếm 60% màn hình */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#hero-content {
+  background-color: rgba(50, 50, 50, 0.85); /* Hộp nền đen mờ */
+  padding: 40px 60px;
+  border-radius: 8px; /* Bo góc hộp */
+  text-align: center;
+}
+
+#hero h1 {
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+#hero p {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+#hero a {
+  background-color: #fce043; /* Nút màu vàng */
+  color: #333;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+#hero a:hover {
+  background-color: #e5c827; /* Vàng đậm hơn khi hover */
+}
+
+/* --- HIGHLIGHTS SECTION --- */
+#highlights {
+  background-color: #e0f7fa; /* Màu nền xanh lam nhạt */
+  padding: 50px 5%;
+}
+
+#highlights h2 {
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  color: #333;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+#destinations {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.destination {
+  width: 30%; /* Mỗi phần tử chiếm khoảng 1/3 chiều rộng */
+  text-align: center;
+}
+
+.destination img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover; /* Giữ tỷ lệ ảnh không bị méo */
+  border-radius: 12px; /* Bo góc ảnh */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Đổ bóng nhẹ cho ảnh */
+}
+
+.destination p {
+  margin-top: 15px;
+  color: #26a69a; /* Màu xanh lá nhạt cho tên thành phố */
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+}
+
+.destination strong {
+  color: #004d40; /* Màu xanh lá đậm cho tên quốc gia */
+}

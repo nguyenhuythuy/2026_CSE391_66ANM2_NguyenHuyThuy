@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Header xanh lam */
+.page-header {
+    background-color: #e1f5fe;
+    padding: 15px;
+    border: 1px solid #b3e5fc;
+    margin-bottom: 20px;
+}
+
+.page-header h1 {
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Wrapper bao quanh form */
+.form-wrapper {
+    border: 1px solid #333;
+    background-color: #fff;
+    padding: 30px;
+}
+
+.form-heading {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Flexbox cho các hàng nhập liệu */
+.input-row {
+    display: flex;
+    gap: 15px; /* Khoảng cách giữa 2 ô input */
+    margin-bottom: 15px;
+}
+
+/* Tự động co giãn các ô input */
+.input-row input, 
+.input-row textarea {
+    flex: 1; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.full-width {
+    width: 100%;
+}
+
+textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* Footer của form (nút bấm và text) */
+.form-footer {
+    display: flex;
+    justify-content: space-between; /* Đẩy 2 phần tử về 2 đầu */
+    align-items: center;
+    margin-top: 10px;
+}
+
+.btn-submit {
+    background-color: #81d4fa;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-submit:hover {
+    background-color: #4fc3f7;
+}
+
+.helper-text {
+    color: #666;
+    font-style: italic;
+}
