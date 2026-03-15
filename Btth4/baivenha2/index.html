@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Đăng Ký Nhiều Bước</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h2>Đăng ký thành viên</h2>
+    
+    <div class="progress-container">
+        <div class="progress" id="progress"></div>
+        <div class="step active" data-title="Cá nhân">1</div>
+        <div class="step" data-title="Tài khoản">2</div>
+        <div class="step" data-title="Xác nhận">3</div>
+    </div>
+
+    <form id="multiStepForm">
+        <div class="form-step active">
+            <h3>Thông tin cá nhân</h3>
+            <div class="form-group">
+                <label for="fullname">Họ tên</label>
+                <input type="text" id="fullname" placeholder="Nhập họ tên">
+                <span class="error" id="nameError"></span>
+            </div>
+            <div class="form-group">
+                <label for="dob">Ngày sinh</label>
+                <input type="date" id="dob">
+                <span class="error" id="dobError"></span>
+            </div>
+            <button type="button" class="btn-next">Tiếp theo</button>
+        </div>
+
+        <div class="form-step">
+            <h3>Thông tin tài khoản</h3>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="email@example.com">
+                <span class="error" id="emailError"></span>
+            </div>
+            <div class="form-group">
+                <label for="password">Mật khẩu</label>
+                <input type="password" id="password" placeholder="Nhập mật khẩu">
+                <span class="error" id="passError"></span>
+            </div>
+            <div class="btn-group">
+                <button type="button" class="btn-prev">Quay lại</button>
+                <button type="button" class="btn-next">Tiếp theo</button>
+            </div>
+        </div>
+
+        <div class="form-step">
+            <h3>Xác nhận thông tin</h3>
+            <div id="summary" class="summary-box">
+                </div>
+            <div class="btn-group">
+                <button type="button" class="btn-prev">Quay lại</button>
+                <button type="submit" class="btn-submit">Hoàn tất</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

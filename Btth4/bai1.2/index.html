@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Điểm Sinh Viên - Nâng Cao</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Quản Lý Điểm Sinh Viên</h2>
+    
+    <div class="input-group">
+        <input type="text" id="hoTen" placeholder="Họ tên sinh viên">
+        <input type="number" id="diem" placeholder="Điểm (0-10)" min="0" max="10" step="0.1">
+        <button id="btnThem">Thêm</button>
+    </div>
+
+    <div class="filter-group">
+        <input type="text" id="timKiem" placeholder="Tìm kiếm theo tên...">
+        <select id="locXepLoai">
+            <option value="Tất cả">Tất cả xếp loại</option>
+            <option value="Giỏi">Giỏi</option>
+            <option value="Khá">Khá</option>
+            <option value="Trung bình">Trung bình</option>
+            <option value="Yếu">Yếu</option>
+        </select>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Họ tên</th>
+                <th id="thDiem" class="sortable" title="Click để sắp xếp">
+                    Điểm <span id="iconSort"></span>
+                </th>
+                <th>Xếp loại</th>
+                <th>Thao tác</th>
+            </tr>
+        </thead>
+        <tbody id="bangSinhVien">
+            </tbody>
+    </table>
+
+    <div class="stats" id="thongKe">
+        Tổng số sinh viên cả lớp: 0 | Điểm trung bình: 0.00
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

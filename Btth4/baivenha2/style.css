@@ -1,0 +1,15 @@
+/* Ẩn các bước mặc định */
+.form-step { display: none; transition: all 0.3s ease; }
+.form-step.active { display: block; }
+
+/* Thanh tiến trình */
+.progress-container { display: flex; justify-content: space-between; position: relative; margin-bottom: 30px; }
+.progress-container::before { content: ""; background: #e0e0e0; position: absolute; top: 50%; left: 0; transform: translateY(-50%); height: 4px; width: 100%; z-index: 1; }
+.progress { background: #0d6efd; position: absolute; top: 50%; left: 0; transform: translateY(-50%); height: 4px; width: 0%; z-index: 1; transition: 0.4s ease; }
+.step { background: #fff; border: 3px solid #e0e0e0; border-radius: 50%; height: 30px; width: 30px; display: flex; align-items: center; justify-content: center; z-index: 2; transition: 0.4s ease; font-weight: bold; }
+.step.active { border-color: #0d6efd; color: #0d6efd; }
+
+/* Giao diện nút */
+.btn-group { display: flex; gap: 10px; margin-top: 20px; }
+.summary-box { background: #f8f9fa; padding: 15px; border-radius: 8px; border-left: 5px solid #0d6efd; }
+.error { color: red; font-size: 12px; }

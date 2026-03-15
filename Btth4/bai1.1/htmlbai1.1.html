@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Điểm Sinh Viên</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Quản Lý Điểm Sinh Viên</h2>
+    
+    <div class="input-group">
+        <input type="text" id="hoTen" placeholder="Họ tên sinh viên">
+        <input type="number" id="diem" placeholder="Điểm (0-10)" min="0" max="10" step="0.1">
+        <button id="btnThem">Thêm</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Họ tên</th>
+                <th>Điểm</th>
+                <th>Xếp loại</th>
+                <th>Thao tác</th>
+            </tr>
+        </thead>
+        <tbody id="bangSinhVien">
+            </tbody>
+    </table>
+
+    <div class="stats" id="thongKe">
+        Tổng số sinh viên: 0 | Điểm trung bình: 0.00
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Đăng Ký Tài Khoản</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <form id="registerForm">
+        <h2>Đăng Ký</h2>
+        
+        <div class="form-group">
+            <div style="display: flex; justify-content: space-between;">
+                <label for="fullname">Họ và tên</label>
+                <small id="nameCounter" style="color: #6c757d;">0/50</small>
+            </div>
+            <input type="text" id="fullname" placeholder="Nhập họ và tên" maxlength="50">
+            <span class="error-msg" id="fullnameError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="name@domain.com">
+            <span class="error-msg" id="emailError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Số điện thoại</label>
+            <input type="text" id="phone" placeholder="Bắt đầu bằng số 0, gồm 10 số">
+            <span class="error-msg" id="phoneError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Mật khẩu</label>
+            <div class="password-wrapper">
+                <input type="password" id="password" placeholder="Mật khẩu">
+                <button type="button" id="togglePassword" class="btn-toggle-pass">👁</button>
+            </div>
+            <div class="strength-meter">
+                <div id="strengthBar" class="strength-bar"></div>
+            </div>
+            <small id="strengthText" class="strength-text"></small>
+            
+            <span class="error-msg" id="passwordError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="confirmPassword">Xác nhận mật khẩu</label>
+            <input type="password" id="confirmPassword" placeholder="Nhập lại mật khẩu">
+            <span class="error-msg" id="confirmPasswordError"></span>
+        </div>
+
+        <div class="form-group">
+            <label>Giới tính</label>
+            <div class="radio-group">
+                <input type="radio" name="gender" id="male" value="Nam"> <label for="male">Nam</label>
+                <input type="radio" name="gender" id="female" value="Nữ"> <label for="female">Nữ</label>
+            </div>
+            <span class="error-msg" id="genderError"></span>
+        </div>
+
+        <div class="form-group">
+            <div class="checkbox-group">
+                <input type="checkbox" id="terms">
+                <label for="terms">Tôi đồng ý với các điều khoản</label>
+            </div>
+            <span class="error-msg" id="termsError"></span>
+        </div>
+
+        <button type="submit">Đăng Ký</button>
+    </form>
+
+    <div id="successMessage" style="display: none; text-align: center; padding: 20px 0;">
+        <h3 style="color: #28a745;">Đăng ký thành công! 🎉</h3>
+        <p>Chào mừng, <strong id="successName"></strong>!</p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
